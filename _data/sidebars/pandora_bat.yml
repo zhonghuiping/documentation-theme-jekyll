@@ -1,0 +1,117 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: 七牛-Pandora 私有部署用户手册
+  version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: 快速开始
+    output: web, pdf
+    folderitems:
+
+    - title: 开通产品
+      url: /pages/pandora/ready.html
+      output: web, pdf
+      type: homepage
+
+    - title: 准备数据
+      url: /pages/pandora/prepare_the_data.html
+      output: web, pdf
+
+    - title: 采集数据
+      url: /pages/pandora/data_collection.html
+      output: web, 
+
+    - title: 日志分析
+      url: /pages/pandora/data_analysis.html
+      output: web, pdf
+
+    - title: 实时监控
+      url: /pages/pandora/data_monitor.html
+      output: web, pdf
+
+    - title: 存储&公网传输
+      url: /pages/pandora/data_monitor.html
+      output: web, pdf
+
+  - title: 产品详解
+    output: web, pdf
+    folderitems:
+
+    - title: 产品架构
+      url: /pages/pandora/architecture.html
+      output: web, pdf
+
+    - title: logkit
+      url: /pages/pandora/logkit.html
+      output: web, pdf
+
+    - title: logkit Pro
+      url: /pages/pandora/logkit-pro.html
+      output: web, pdf
+
+    - title: 工作流
+      url: /pages/pandora/workflow.html
+      output: web, pdf
+
+    - title: 日志分析服务
+      url: /pages/pandora/logdb.html
+      output: web, pdf
+
+    - title: Grafana
+      url: /pages/pandora/grafana.html
+      output: web, pdf
+
+  - title: 场景实践
+    output: web, pdf
+    folderitems:
+
+    - title: Nginx日志分析
+      url: /pages/pandora/nginx.html
+      output: web, pdf
+
+    - title: Kubernetes日志收集与处理
+      url: /pages/pandora/k8s.html
+      output: web, pdf
+
+    - title: 关键字报警和日志搜索
+      url: /pages/pandora/keywordalert.html
+      output: web, pdf
+
+    - title: apache 日志分析
+      url: /pages/pandora/apachelog.html
+      output: web, pdf
+
+    - title: telegraf服务器监控
+      url: /pages/pandora/monitoring.html
+      output: web, pdf
+
+    - title: nginx metric性能监控
+      url: /pages/pandora/nginxMetric.html
+      output: web, pdf
+
+    - title: 服务器性能监控
+      url: /pages/pandora/metrics.html
+      output: web, pdf
+
+    - title: php-fpm性能监控
+      url: /pages/pandora/phpfpm.html
+      output: web, pdf
+
+
+
+  

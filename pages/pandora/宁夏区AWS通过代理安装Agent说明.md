@@ -1,0 +1,100 @@
+## 产品简介
+### 招行宁夏区AWS机器通过代理安装Logkit-pro文档
+
+### logkit Pro 行内网站
+
+[http://12.16.5.50](http://12.16.5.50)
+
+进入 [logkit Pro 官网](http://12.16.5.50)，点击右上角登录，登录用户名密码提前找七牛申请。*（默认用户名为工作空间名，需要提前找七牛这边激活这个工作空间名哦）* 点击【机器管理】-> 【添加机器】-> 【手动安装】，可以通过“手动安装”模块，可以获取我们提供的一键式安装脚本：
+
+### 针对Linux 机器
+登录后点击添加机器，选择Linux安装，复制地址，如下图
+![](http://p5bjfbphc.bkt.clouddn.com/anzhuang.png)
+
+复制出来的地址如下所示：（注意，下面的地址只是事例，不可直接复制使用）
+
+> export QINIU_ACCESS_KEY=KuNhy……nqcK; export QINIU_SECRET_KEY=tbHrck……Lunnf; export QINIU_EMAIL=qiniu;curl -L 'http://12.16.5.50:80/v1/install/5dd495b924fc1ebc872bea143/sh?tags=' | bash
+
+
+**第一步：**
+
+首先我们需要将其中的IP地址改为代理的IP地址，即将其中的 `12.16.5.50` 改为 `55.18.5.171`
+
+> export QINIU_ACCESS_KEY=KuNhy……nqcK; export QINIU_SECRET_KEY=tbHrck……Lunnf; export QINIU_EMAIL=qiniu;curl -L 'http://12.16.5.50:80/v1/install/5dd495b924fc1ebc872bea143/sh?tags=' | bash
+
+**第二步：**
+
+在这个地址前增加环境变量设置，即将原来的相关地址都修改为代理地址，加上如下的内容：
+
+> export SMARTELF_HOST=http://55.18.5.171:80/v1;export LOGDB_HOST=http://55.18.5.171:9997;export PIPELINE_HOST=http://55.18.5.171:9999;export DOWNLOAD_URL=http://55.18.5.171:80/v1/archives;
+
+加上之后构造成的地址为：
+
+> export SMARTELF_HOST=http://55.18.5.171:80/v1;export LOGDB_HOST=http://55.18.5.171:9997;export PIPELINE_HOST=http://55.18.5.171:9999;export DOWNLOAD_URL=http://55.18.5.171:80/v1/archives;
+> export QINIU_ACCESS_KEY=KuNhy……nqcK; export QINIU_SECRET_KEY=tbHrck……Lunnf; export QINIU_EMAIL=qiniu;curl -L 'http://12.16.5.50:80/v1/install/5dd495b924fc1ebc872bea143/sh?tags=' | bash
+
+其中一共添加了4个环境变量
+
+> export SMARTELF_HOST=http://55.18.5.171:80/v1 
+> export LOGDB_HOST=http://55.18.5.171:9997 
+> export PIPELINE_HOST=http://55.18.5.171:9999
+> export DOWNLOAD_URL=http://55.18.5.171:80/v1/archives
+
+
+**第三步：**
+
+在linux服务器上执行以上构造好的命令即可安装成功。
+> export SMARTELF_HOST=http://55.18.5.171:80/v1;export LOGDB_HOST=http://55.18.5.171:9997;export PIPELINE_HOST=http://55.18.5.171:9999;export DOWNLOAD_URL=http://55.18.5.171:80/v1/archives;
+> export QINIU_ACCESS_KEY=KuNhy……nqcK; export QINIU_SECRET_KEY=tbHrck……Lunnf; export QINIU_EMAIL=qiniu;curl -L 'http://12.16.5.50:80/v1/install/5dd495b924fc1ebc872bea143/sh?tags=' | bash
+
+效果如下：
+上述步骤安装好以后，就可以正常使用了。
+
+
+
+### 针对Windows机器
+**第一步：**
+
+下载安装脚本到Windows机器
+![](http://p5bjfbphc.bkt.clouddn.com/zhaohang:windows.jpeg)
+
+
+**第二步：**
+
+在windows机器上设置四个环境变量即可
+
+
+> SMARTELF_HOST  设置为   http://55.18.5.171:80/v1
+> 
+> LOGDB_HOST   设置为  http://55.18.5.171:9997
+> 
+> PIPELINE_HOST设置为 http://55.18.5.171:9999
+> 
+> DOWNLOAD_URL设置为 http://55.18.5.171:80/v1/archives
+
+`Windows设置环境变量的方法见下文附录`
+
+
+
+**第三步：**
+设置完环境变量后执行脚本即可
+
+
+
+#### 附录：Windows的环境变量设置方法
+
+Windows 中设置环境变量
+
+第一步:
+![](http://p5bjfbphc.bkt.clouddn.com/1.jpeg)
+第二步:
+![](http://p5bjfbphc.bkt.clouddn.com/2.jpeg)
+第三步:
+![](http://p5bjfbphc.bkt.clouddn.com/3.jpeg)
+第四步:
+![](http://p5bjfbphc.bkt.clouddn.com/4.jpeg)
+第五步:
+![](http://p5bjfbphc.bkt.clouddn.com/5.jpeg)
+第六步:
+![](http://p5bjfbphc.bkt.clouddn.com/6.jpeg)
+

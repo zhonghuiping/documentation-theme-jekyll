@@ -1,0 +1,63 @@
+## 产品简介
+
+### logkit Pro 行内网站
+
+[http://12.16.5.50](http://12.16.5.50)
+
+### logkit Pro 概述
+
+logkit Pro 是基于社区版 [logkit](https://github.com/qiniu/logkit/wiki) 开发的一款面向企业的日志收集器管理平台，解决了开源 logkit 孤立运行无法统一管理的难题。致力于让企业在每台机器只安装一个 agent 的基础上，解决机器管理和运维监控的难题。
+
+除了基础的数据读取、解析、转换、发送等功能，logkit Pro 提供了更友好的一键部署、机器监控、收集器统一分发、标签管理、监控告警等功能，弥补了开源 logkit 在规模化后管理上的缺陷。
+
+让我们一起先来快速体验 logkit Pro 方便的日志解析、转换和发送功能吧。
+
+
+
+## logkit Pro 工作流程
+
+logkit Pro 通过如下图的工作流程实现对机器和收集器的统一管理。
+
+![](http://p6ykx3lg2.bkt.clouddn.com/logkit_pro1.png)
+
+
+1. 首先需要安装 agent  以便将您的机器添加上来，在机器上执行安装脚本即可。
+2. 其次就是按照您的业务添加收集器，收集器添加的过程可以通过 agent 获取实际的业务数据，进行一系列校验。
+2. 有了收集器，就可以将收集器分发到不同的机器上。
+3. 针对不同的业务组，可以将机器设置不同的标签，收集器也可以针对标签统一发送。
+
+
+
+## 用户指南--LogkitPro安装教程
+### 安装LogkitPro
+
+
+进入 [logkit Pro 官网](http://12.16.5.50)，点击右上角登录，登录用户名密码提前找七牛申请。*（默认用户名为工作空间名，需要提前找七牛这边激活这个工作空间名哦）* 点击【机器管理】-> 【添加机器】-> 【手动安装】
+
+可以通过“手动安装”模块，可以获取我们提供的一键式安装脚本：
+![](http://p5bjfbphc.bkt.clouddn.com/anzhuang.png)
+
+对于`linux`或`mac`用户来说，直接在控制台粘贴并执行复制的命令即可。
+
+对于`windows`用户，将复制的url在浏览器打开，将内容复制到文本文件中，并另存为 `logkit.vbs`，再双击执行 `logkit.vbs` 脚本安装。
+
+![](http://p5bjfbphc.bkt.clouddn.com/install.png)
+
+
+安装好以后您可以在【机器管理】列表看到机器的相关信息，如机器所属标签、机器里的所有收集器、机器地址等，详细信息阅读[机器管理](#机器管理)。
+
+### 安装失败FAQ
+1、Q：针对已经安装过我们agent的服务器，会出现类似文件或者进程已经存在的报错：
+
+![](http://p5bjfbphc.bkt.clouddn.com/zhaohang:chongzhuang.png)
+A：该类报错一般是因为上次安装系统用户和现操作用户不一致导致的，可以使用ps -ef | grep logkit-pro找到对应的进程号，然后kill该进程再次安装；也可以切换到root账号下再次执行安装的curl语句。
+
+
+
+2、Q：针对已经设置过端口转发的服务器，会出现如下安装的报错：
+![](http://p5bjfbphc.bkt.clouddn.com/zhaohang:daili.png)
+A：该类报错一般是做了代理，设置了端口转发导致，比如：客户在该服务器配置了一条规则，把209这台机器的所有出口端口为80的请求都转发到8090，导致无法连接上我们logkit-pro服务端。
+![](http://p5bjfbphc.bkt.clouddn.com/zhaohang:route.png)
+![](http://p5bjfbphc.bkt.clouddn.com/zhaohang:route2.png)
+解决方案为添加一条路由规则： `iptables -t nat -I OUTPUT -p tcp -d 12.16.5.50 --dport 80 -j ACCEPT`
+即可

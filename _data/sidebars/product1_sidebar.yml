@@ -1,9 +1,8 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
-
 entries:
-- title: Sidebar
-  product: Product1
+- title: sidebar
+  product: 七牛-pandora 私有部署用户手册
   version: 1.0
   folders:
 
@@ -20,41 +19,368 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Getting Started
+  - title: 1产品简介
     output: web, pdf
     folderitems:
-    - title: Product 1 home
-      url: /p1_landing_page.html
-      output: web
 
-    - title: Sample 1
-      url: /p1_sample1.html
+    - title: 1.1什么是智能日志管理平台
+      url: /pages/pandora/1.1什么是智能日志管理平台.html
+      output: web, pdf
+    - title: 1.2产品功能
+      url: /pages/pandora/1.2产品功能.html
+      output: web, pdf
+    - title: 1.3部署方式
+      url: /pages/pandora/1.3部署方式.html
+      output: web, pdf
+    - title: 1.4产品优势
+      url: /pages/pandora/1.4产品优势.html
       output: web, pdf
 
-    - title: Sample 2
-      url: /p1_sample2.html
-      output: web, pdf
-
-    - title: Sample 3
-      url: /p1_sample3.html
-      output: web, pdf
-
-  - title: Another heading
+  - title: 2快速开始
     output: web, pdf
-
     folderitems:
-    - title: Sample 4
-      url: /p1_sample4.html
+
+    - title: 2.1十分钟玩转智能日志平台
+      url: /pages/pandora/2.1十分钟玩转智能日志平台.html
+      output: web, pdf
+    - title: 2.2实时日志快速入门
+      url: /pages/pandora/3.2.html
       output: web, pdf
 
-    - title: Sample 5
-      url: /p1_sample5.html
+  - title: 3产品详解
+    output: web, pdf
+    folderitems:
+
+    subfolders:  
+    - title: 3.1数据采集
+      url: /pages/pandora/3.1数据采集.html
+      output: web, pdf
+      subfolderitems:
+      
+        - title: 3.1.1采集方式
+          url: /pages/pandora/3.1.1采集方式.html
+          output: web, pdf
+        - title: 3.1.2文件上传
+          url: /pages/pandora/3.1.2文件上传.html
+          output: web, pdf
+        - title: 3.1.2.1本地日志文件上传
+          url: /pages/pandora/3.1.2.1本地日志文件上传.html
+          output: web, pdf
+        - title: 3.1.2.2日志解析
+          url: /pages/pandora/3.1.2.2日志解析.html
+          output: web, pdf
+        - title: 3.1.2.2.1使用正则表达式解析
+          url: /pages/pandora/3.1.2.2.1使用正则表达式解析.html
+          output: web, pdf
+        - title: 3.1.2.2.2使用固定分隔符解析
+          url: /pages/pandora/3.1.2.2.2使用固定分隔符解析.html
+          output: web, pdf
+        - title: 3.1.2.2.3解析 JSON 格式日志
+          url: /pages/pandora/3.1.2.2.3解析 JSON 格式日志.html
+          output: web, pdf
+        - title: 3.1.2.2.4不解析直接上传
+          url: /pages/pandora/3.1.2.2.4不解析直接上传.html
+          output: web, pdf
+        - title: 3.1.2.2.5使用仓库已有的解析规则
+          url: /pages/pandora/3.1.2.2.5使用仓库已有的解析规则.html
+          output: web, pdf
+        - title: 3.1.2.2.6使用键值对方式解析
+          url: /pages/pandora/3.1.2.2.6使用键值对方式解析.html
+          output: web, pdf
+
+        - title: 3.1.2.3文件批量上传
+          url: /pages/pandora/3.1.2.3文件批量上传.html
+          output: web, pdf
+        - title: 3.1.2.4开放API上传文本
+          url: /pages/pandora/3.1.2.4开放API上传文本.html
+          output: web, pdf
+
+        - title: 3.1.3logkit-pro 日志收集工具
+          url: /pages/pandora/3.1.3logkit-pro 日志收集工具.html
+          output: web, pdf
+        - title: 3.1.3.1logkit Pro 介绍
+          url: /pages/pandora/3.1.3.1logkit Pro 介绍.html
+          output: web, pdf
+        - title: 3.1.3.2logkit Pro 安装
+          url: /pages/pandora/3.1.3.2logkit Pro 安装.html
+          output: web, pdf
+        - title: 3.1.3.2.1使用 supervisor 管理 logkit-pro
+          url: /pages/pandora/3.1.3.2.1使用 supervisor 管理 logkit-pro.html
+          output: web, pdf
+
+        - title: 3.1.3.3logkit-pro主配置文件说明
+          url: /pages/pandora/3.1.3.3logkit-pro主配置文件说明.html
+          output: web, pdf
+        - title: 3.1.3.4快速体验
+          url: /pages/pandora/3.1.3.4快速体验.html
+          output: web, pdf
+        - title: 3.1.3.5功能详解
+          url: /pages/pandora/3.1.3.5功能详解.html
+          output: web, pdf
+        - title: 3.1.3.6数据源(Readers)
+          url: /pages/pandora/3.1.3.6数据源(Readers).html
+          output: web, pdf
+        - title: 3.1.3.6.1文本文件数据源
+          url: /pages/pandora/3.1.3.6.1文本文件数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.2AWS Cloudwatch数据源
+          url: /pages/pandora/3.1.3.6.2AWS Cloudwatch数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.3AWS S3 数据源
+          url: /pages/pandora/3.1.3.6.3AWS S3 数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.4Socket数据源
+          url: /pages/pandora/3.1.3.6.4Socket数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.5MongoDB数据源
+          url: /pages/pandora/3.1.3.6.5MongoDB数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.6Snmp数据源
+          url: /pages/pandora/3.1.3.6.6Snmp数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.7Redis数据源
+          url: /pages/pandora/3.1.3.6.7Redis数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.8HTTP数据源
+          url: /pages/pandora/3.1.3.6.8HTTP数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.9Kafka数据源
+          url: /pages/pandora/3.1.3.6.9Kafka数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.10Elasticsearch数据源
+          url: /pages/pandora/3.1.3.6.10Elasticsearch数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.11MySQL数据源
+          url: /pages/pandora/3.1.3.6.11MySQL数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.12MSSQL数据源
+          url: /pages/pandora/3.1.3.6.12MSSQL数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.13PostgreSQL数据源
+          url: /pages/pandora/3.1.3.6.13PostgreSQL数据源.html
+          output: web, pdf
+        - title: 3.1.3.6.14脚本执行 数据源
+          url: /pages/pandora/3.1.3.6.14脚本执行 数据源.html
+          output: web, pdf
+
+        - title: 3.1.3.7解析器(Parsers)
+          url: /pages/pandora/3.1.3.7解析器(Parsers).html
+          output: web, pdf
+        - title: 3.1.3.7.1按 kafkarest 日志解析
+          url: /pages/pandora/3.1.3.7.1按 kafkarest 日志解析.html
+          output: web, pdf
+        - title: 3.1.3.7.2按 mysql 慢请求日志解析
+          url: /pages/pandora/3.1.3.7.2按 mysql 慢请求日志解析.html
+          output: web, pdf
+        - title: 3.1.3.7.3按 grok 格式解析
+          url: /pages/pandora/3.1.3.7.3按 grok 格式解析.html
+          output: web, pdf
+
+        - title: 3.1.3.8转换器(Transformers)
+          url: /pages/pandora/3.1.3.8转换器(Transformers).html
+          output: web, pdf
+        - title: 3.1.3.8.1csv转换器
+          url: /pages/pandora/3.1.3.8.1csv转换器.html
+          output: web, pdf
+        - title: 3.1.3.8.2JSON 转换器
+          url: /pages/pandora/3.1.3.8.2JSON 转换器.html
+          output: web, pdf
+        - title: 3.1.3.8.3xml 转换器
+          url: /pages/pandora/3.1.3.8.3xml 转换器.html
+          output: web, pdf
+
+        - title: 3.1.3.9发送源（Senders）
+          url: /pages/pandora/3.1.3.9发送源（Senders）.html
+          output: web, pdf
+        - title: 3.1.3.9.1HTTP sender
+          url: /pages/pandora/3.1.3.9.1HTTP sender.html
+          output: web, pdf
+        - title: 3.1.3.9.2Elasticsearch sender
+          url: /pages/pandora/3.1.3.9.2Elasticsearch sender.html
+          output: web, pdf
+        - title: 3.1.3.9.3Kafka sender
+          url: /pages/pandora/3.1.3.9.3Kafka sender.html
+          output: web, pdf
+        - title: 3.1.3.9.4MongoDB sender
+          url: /pages/pandora/3.1.3.9.4MongoDB sender.html
+          output: web, pdf
+
+        - title: 3.1.3.10监控(Metrics)
+          url: /pages/pandora/3.1.3.10监控(Metrics).html
+          output: web, pdf
+        - title: 3.1.3.10.1Netstat监控
+          url: /pages/pandora/3.1.3.10.1Netstat监控.html
+          output: web, pdf
+        - title: 3.1.3.10.2Procstat监控
+          url: /pages/pandora/3.1.3.10.2Procstat监控.html
+          output: web, pdf
+        - title: 3.1.3.10.3System监控
+          url: /pages/pandora/3.1.3.10.3System监控.html
+          output: web, pdf
+        - title: 3.1.3.10.4Memory监控
+          url: /pages/pandora/3.1.3.10.4Memory监控.html
+          output: web, pdf
+        - title: 3.1.3.10.5DiskIO监控
+          url: /pages/pandora/3.1.3.10.5DiskIO监控.html
+          output: web, pdf
+        - title: 3.1.3.10.6Net监控
+          url: /pages/pandora/3.1.3.10.6Net监控.html
+          output: web, pdf
+        - title: 3.1.3.10.7Procstat监控
+          url: /pages/pandora/3.1.3.10.7Procstat监控.html
+          output: web, pdf
+        - title: 3.1.3.10.8swap监控
+          url: /pages/pandora/3.1.3.10.8swap监控.html
+          output: web, pdf
+
+        - title: 3.1.3.11logkit-pro 常见问题
+          url: /pages/pandora/3.1.3.11logkit-pro 常见问题.html
+          output: web, pdf
+
+
+    - title: 3.2数据存储和分析
+      url: /pages/pandora/3.2数据存储和分析.html
+      output: web, pdf
+      subfolders:
+        
+
+      - title: 3.2.1实时分析
+        url: /pages/pandora/3.2.1实时分析.html
+        output: web, pdf
+        subfolderitems:
+
+        - title: 3.2.1.1实时分析简介
+          url: /pages/pandora/3.2.1.1实时分析简介.html
+          output: web, pdf
+        - title: 3.2.1.2实时日志滚动输出
+          url: /pages/pandora/3.2.1.2实时日志滚动输出.html
+          output: web, pdf
+        - title: 3.2.1.3本地上传日志
+          url: /pages/pandora/3.2.1.3本地上传日志.html
+          output: web, pdf
+
+        - title: 3.2.2搜索分析
+          url: /pages/pandora/3.2.2搜索分析.html
+          output: web, pdf
+        - title: 3.2.2.1搜索分析介绍
+          url: /pages/pandora/3.2.2.1搜索分析介绍.html
+          output: web, pdf
+        - title: 3.2.2.2快速搜索
+          url: /pages/pandora/3.2.2.2快速搜索.html
+          output: web, pdf
+        - title: 3.2.2.3快速分析
+          url: /pages/pandora/3.2.2.3快速分析.html
+          output: web, pdf
+        - title: 3.2.2.4上下文查询
+          url: /pages/pandora/3.2.2.4上下文查询.html
+          output: web, pdf
+        - title: 3.2.2.5搜索语法
+          url: /pages/pandora/3.2.2.5搜索语法.html
+          output: web, pdf
+        - title: 3.2.2.6分词和索引
+          url: /pages/pandora/3.2.2.6分词和索引.html
+          output: web, pdf
+
+        - title: 3.2.3可视化
+          url: /pages/pandora/3.2.3可视化.html
+          output: web, pdf
+
+        - title: 3.2.3.1对接 Grafana
+          url: /pages/pandora/3.2.3.1对接 Grafana.html
+          output: web, pdf
+        - title: 3.2.3.2报表说明
+          url: /pages/pandora/3.2.3.2报表说明.html
+          output: web, pdf
+        - title: 3.2.3.2.2柱状图
+          url: /pages/pandora/3.2.3.2.2柱状图.html
+          output: web, pdf
+        - title: 3.2.3.2.3折线图
+          url: /pages/pandora/3.2.3.2.3折线图.html
+          output: web, pdf
+        - title: 3.2.3.2.4饼图
+          url: /pages/pandora/3.2.3.2.4饼图.html
+          output: web, pd
+
+        - title: 3.2.4仓库管理
+          url: /pages/pandora/3.2.4仓库管理.html
+          output: web, pdf
+        - title: 3.2.5告警与通知
+          url: /pages/pandora/3.2.5告警与通知.html
+          output: web, pdf
+
+    - title: 3.3工作流管理
+      url: /pages/pandora/3.3工作流管理.html
+      output: web, pdf
+      subfolders:
+
+      - title: 3.3.1工作流简介
+        url: /pages/pandora/3.3.1工作流简介.html
+        output: web, pdf
+        subfolderitems:
+
+        - title: 3.3.2数据源
+          url: /pages/pandora/3.3.2数据源.html
+          output: web, pdf
+        - title: 3.3.3数据计算
+          url: /pages/pandora/3.3.3数据计算.html
+          output: web, pdf
+        - title: 3.3.4数据投递
+          url: /pages/pandora/3.3.4数据投递.html
+          output: web, pdf
+        - title: 3.3.5管理组件
+          url: /pages/pandora/3.3.5管理组件.html
+          output: web, pdf
+
+    - title: 3.4机器学习组件
+      url: /pages/pandora/3.4机器学习组件.html
+      output: web, pdf
+      subfolders:
+
+      - title: 3.4.1异常检测与预测简介
+        url: /pages/pandora/3.4.1异常检测与预测简介.html
+        output: web, pdf
+        subfolderitems:
+
+        - title: 3.4.2异常检测详解
+          url: /pages/pandora/3.4.2异常检测详解.html
+          output: web, pdf
+        - title: 3.4.3预测详解
+          url: /pages/pandora/3.4.3预测详解.html
+          output: web, pdf
+        - title: 3.4.4场景分析
+          url: /pages/pandora/3.4.4场景分析.html
+          output: web, pdf
+
+    - title: 3.5监控审计
+      url: /pages/pandora/3.5监控审计.html
+      output: web, pdf
+    - title: 3.6授权管理
+      url: /pages/pandora/3.6授权管理.html
       output: web, pdf
 
-    - title: Sample 6
-      url: /p1_sample6.html
+  - title: 4场景实践
+    output: web, pdf
+    folderitems:
+
+    - title: 4.1Nginx 日志分析
+      url: /pages/pandora/4.1Nginx 日志分析.html
+      output: web, pdf
+    - title: 4.2Apache 日志采集
+      url: /pages/pandora/4.2Apache 日志采集.html
+      output: web, pdf
+    - title: 4.3Kubernetes 容器日志采集
+      url: /pages/pandora/4.3Kubernetes 容器日志采集.html
+      output: web, pdf
+    - title: 4.4syslog 日志采集
+      url: /pages/pandora/4.4syslog 日志采集.html
+      output: web, pdf
+    - title: 4.5服务器性能监控
+      url: /pages/pandora/4.5服务器性能监控.html
+      output: web, pdf
+    - title: 4.6日志搜索和关键字报警
+      url: /pages/pandora/4.6日志搜索和关键字报警.html
       output: web, pdf
 
-    - title: Sample 7
-      url: /p1_sample7.html
-      output: web, pdf
+
+
+  
